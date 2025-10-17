@@ -1,0 +1,21 @@
+4
+2 2 0
+1 2
+1 2
+1 1 0 0 0 0 0 0
+Let the robot take out each product from the input sequence and place it into the output sequence.
+8 8 3
+3 9 5 1 -2 -2 9 -9
+-6 6 4 -4 0 0 18 -18
+1 1 1 1 1 1 1 1
+For every two items in the input sequence, first subtract the second item from the first, and place the result in the output sequence. Then subtract the first item from the second, and place the result in the output sequence. Repeat.
+8 2 3
+6 2 7 7 -9 3 -3 -3
+7 -3
+1 1 1 1 1 1 1 1
+Take two numbers from the input sequence in turn. If they are equal, output one of them; otherwise, discard it. Repeat this process until the input conveyor belt is empty.
+9 9 4
+1 4 2 8 5 7 9 6 3
+1 16 4 64 25 49 81 36 9
+1 1 1 1 1 1 1 1
+Square each number in the input sequence and output them in order.
