@@ -236,25 +236,25 @@ void prtrobot(int x,int y){
 	if(if_hand){
 		setColor(14);
 		setCursor(x-2,y);
-		cout<<"¼¦ÄãÌ«ÃÀ"; 
+		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
 		setCursor(x-2,y+1);
-		cout<<"¼¦@||@ÃÀ"; 
+		cout<<"é¸¡@||@ç¾Ž"; 
 		setCursor(x-2,y+2);
-		cout<<"¼¦ÄãÌ«ÃÀ"; 
+		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
 		setCursor(x-2,y+3);
-		cout<<"¼¦    ÃÀ"; 
+		cout<<"é¸¡    ç¾Ž"; 
 		prtblock(x+6,y,inhand_block);
 	}
 	else{
 		setColor(14);
 		setCursor(x-2,y);
-		cout<<"¼¦ÄãÌ«ÃÀ"; 
+		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
 		setCursor(x-2,y+1);
-		cout<<"¼¦@||@ÃÀ"; 
+		cout<<"é¸¡@||@ç¾Ž"; 
 		setCursor(x-2,y+2);
-		cout<<"¼¦ÄãÌ«ÃÀ"; 
+		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
 		setCursor(x-2,y+3);
-		cout<<"¼¦    ÃÀ";
+		cout<<"é¸¡    ç¾Ž";
 	}
 }
 void prtscr(){
@@ -397,7 +397,7 @@ void logic(){
 		if(ptr_output!=max_output_ex){
 			system("cls");
 			setColor(12);
-			cout<<"Fail";
+			cout<<"Fail\n"<<"Total steps:"<<cnt-1;
 			string tmp;
 			tmp="Fail";
 			MessageBox(NULL,tmp.c_str(),"Fail",MB_ICONERROR);
@@ -408,7 +408,7 @@ void logic(){
 				if(output_list[i]!=output_ex[i]){
 					system("cls");
 					setColor(12);
-					cout<<"Fail";
+					cout<<"Fail\n"<<"Total steps:"<<cnt-1;
 					string tmp;
 					tmp="Fail";
 					MessageBox(NULL,tmp.c_str(),"Fail",MB_ICONERROR);
@@ -418,9 +418,12 @@ void logic(){
 			}
 			system("cls");
 			setColor(15);
-			cout<<"Success";
+			cout<<"Success\n"<<"Total steps:"<<cnt-1;
 			string tmp;
 			tmp="Success";
+			if(level+1==ex&&max_level!=ex){
+				cout<<"\nCongratulations!You've complete all levels!\nNow check maker's github account:54liujingcheng!";
+			}
 			if(level+1==max_level){
 				max_level=min(level+2,ex);
 				ofstream fout("user.txt");
