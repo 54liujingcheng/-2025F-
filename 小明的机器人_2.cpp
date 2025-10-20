@@ -30,10 +30,13 @@ void read(int* max_cmd,int* err_flag,int* cmds){
 		int idx=-1;
 		for(int i=0;i<s.size();i++){
 		ss.clear();
+			int flag=0;
 			while(s[i]!=' '&&i<s.size()){
 				ss+=s[i];
 				i++;
+				flag=1;
 			}
+			if(!flag&&s[i]==' ')continue;
 			if(idx==-1){
 				if(ss=="inbox"){
 					cmds[cnt]=0;

@@ -103,10 +103,13 @@ void read(int* max_cmd,int* cmds){
 		int idx=-1;
 		for(int i=0;i<s.size();i++){
 		ss.clear();
+		int flag=0;
 			while(s[i]!=' '&&i<s.size()){
 				ss+=s[i];
 				i++;
+				flag=1;
 			}
+			if(!flag&&s[i]==' ')continue;
 			if(idx==-1){
 				if(ss=="inbox"){
 					cmds[cnt]=0;
@@ -236,25 +239,25 @@ void prtrobot(int x,int y){
 	if(if_hand){
 		setColor(14);
 		setCursor(x-2,y);
-		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
+		cout<<"¼¦ÄãÌ«ÃÀ"; 
 		setCursor(x-2,y+1);
-		cout<<"é¸¡@||@ç¾Ž"; 
+		cout<<"¼¦@||@ÃÀ"; 
 		setCursor(x-2,y+2);
-		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
+		cout<<"¼¦ÄãÌ«ÃÀ"; 
 		setCursor(x-2,y+3);
-		cout<<"é¸¡    ç¾Ž"; 
+		cout<<"¼¦    ÃÀ"; 
 		prtblock(x+6,y,inhand_block);
 	}
 	else{
 		setColor(14);
 		setCursor(x-2,y);
-		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
+		cout<<"¼¦ÄãÌ«ÃÀ"; 
 		setCursor(x-2,y+1);
-		cout<<"é¸¡@||@ç¾Ž"; 
+		cout<<"¼¦@||@ÃÀ"; 
 		setCursor(x-2,y+2);
-		cout<<"é¸¡ä½ å¤ªç¾Ž"; 
+		cout<<"¼¦ÄãÌ«ÃÀ"; 
 		setCursor(x-2,y+3);
-		cout<<"é¸¡    ç¾Ž";
+		cout<<"¼¦    ÃÀ";
 	}
 }
 void prtscr(){
